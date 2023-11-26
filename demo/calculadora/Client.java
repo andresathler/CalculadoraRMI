@@ -23,28 +23,23 @@ public class Client {
                 int first = scanner.nextInt();
                 System.out.println("Entre com o segundo número:");
                 int second = scanner.nextInt();
-                int result;
 
                 switch (option) {
                     case 1:
                         Addition addition = (Addition) registry.lookup("Calculator");
-                        result = addition.add(first, second);
-                        System.out.println("Adição: " + first + " + " + second + " = " + result);
+                        System.out.println("Adição: " + first + " + " + second + " = " + addition.add(first, second));
                         break;
                     case 2:
                         Subtraction subtraction = (Subtraction) registry.lookup("Calculator");
-                        result = subtraction.sub(first, second);
-                        System.out.println("Subtração: " + first + " - " + second + " = " + result);
+                        System.out.println("Subtração: " + first + " - " + second + " = " + subtraction.sub(first, second));
                         break;
                     case 3:
                         Multiplication multiplication = (Multiplication) registry.lookup("Calculator");
-                        result = multiplication.mult(first, second);
-                        System.out.println("Multiplicação: " + first + " * " + second + " = " + result);
+                        System.out.println("Multiplicação: " + first + " * " + second + " = " + multiplication.mult(first, second));
                         break;
                     case 4:
                         Division division = (Division) registry.lookup("Calculator");
-                        result = division.div(first, second);
-                        System.out.println("Divisão: " + first + " / " + second + " = " + result);
+                        System.out.println("Divisão: " + first + " / " + second + " = " + division.div(first, second));
                         break;
                     default:
                         System.out.println("Entre com um valor válido");

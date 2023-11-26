@@ -24,8 +24,8 @@ public class Calculator extends UnicastRemoteObject
      * @return x / y
      */
     @Override
-    public int div(int x, int y) throws RemoteException {
-        return x / y;
+    public double div(int x, int y) throws RemoteException {
+        return (double) x / (double) y;
     }
 
     /**
